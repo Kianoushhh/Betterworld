@@ -6,4 +6,47 @@
 <div style="background-image: url('https://i.pinimg.com/originals/74/a8/25/74a8258fecbc09155033242cef2cc69b.gif'); padding: 5px; width: 490px; height: 278px; border: 1px solid black;">&nbsp;</div>
 <script type="text/javascript" src="https://freehitcounters.org/count/1qhr"></script><br>
  <a href='https://www.herrenuhr-auktion.de/'>www.Herrenuhr-Auktion.de</a> <script type='text/javascript' src='https://whomania.com/ctr?id=a8c7c05531c9c9aead434ba12321b15818a19067'></script>
-<a href="http://adfoc.us/48176671480478" onclick="javascript:void window.open('http://adfoc.us/48176671480478','1552653897727','width=1,height=1,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">Pop-up Window</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>ColorBox demo</title>
+    <link rel="stylesheet" href="http://www.jacklmoore.com/colorbox/example1/colorbox.css" />
+  </head>
+  <body>
+    <h1>Hello, there!</h1>
+    <h2>This is some content</h2>
+    <p>The popup will open in <span id="seconds">5</span> seconds</p>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://www.jacklmoore.com/colorbox/jquery.colorbox.js"></script>
+    <script>
+      function openColorBox(){
+        $.colorbox({
+          iframe:true,
+          width:"80%",
+          height:"80%",
+          href: "http://www.sitepoint.com",
+          onLoad: function() {
+            $('#cboxClose').remove();
+            setTimeout(function(){
+              $(window).colorbox.close();
+            }, 5000)
+          }
+        });
+      }
+
+      function countDown(){
+        seconds--
+        $("#seconds").text(seconds);
+        if (seconds === 0){
+          openColorBox();
+          clearInterval(i);
+        }
+      }
+
+      var seconds = 5,
+          i = setInterval(countDown, 1000);
+    </script>
+  </body>
+</html>
